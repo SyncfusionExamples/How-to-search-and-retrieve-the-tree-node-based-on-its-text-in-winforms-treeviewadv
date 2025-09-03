@@ -168,6 +168,7 @@ public partial class TreeViewSearchForm : MetroForm
 Private form As TreeViewSearchForm
 'To assign the TreeViewAdv to TreeViewSearchForm
 form = New TreeViewSearchForm(Me.treeViewAdv1)
+
 'To show the search dialog
 Private Sub treeViewAdv1_PreviewKeyDown(ByVal sender As Object, ByVal e As PreviewKeyDownEventArgs)
    If e.Modifiers = Keys.Control AndAlso e.KeyValue = Keys.F Then
@@ -182,6 +183,7 @@ Partial Public Class TreeViewSearchForm
     Private dialog As TreeViewAdvFindReplaceDialog = Nothing
     'Initialize the TreeViewAdv
     Private TreeView As TreeViewAdv
+    
     'To pass the TreeviewAdv argument to the form.
     Public Sub New(ByVal tree As TreeViewAdv)
         InitializeComponent()
@@ -190,32 +192,32 @@ Partial Public Class TreeViewSearchForm
         dialog = New TreeViewAdvFindReplaceDialog(Me.TreeView)
     End Sub
    
- 'To get the TreeViewSearchNavigation
+    'To get the TreeViewSearchNavigation
     Private Sub comboBox3_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs)
        dialog.TreeViewSearchNavigation = CType(Me.SearchRangeCombo.Items(Me.comboBox3.Items.IndexOf(Me.comboBox3.SelectedItem)), TreeViewSearchNavigation)
     End Sub
    
- 'To get the TreeViewSearchRange
+    'To get the TreeViewSearchRange
     Private Sub SearchRangeCombo_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles SearchRangeCombo.SelectedIndexChanged
        dialog.TreeViewSearchRange = CType(Me.SearchRangeCombo.Items(Me.SearchRangeCombo.Items.IndexOf(Me.SearchRangeCombo.SelectedItem)), TreeViewSearchRange)
     End Sub
    
- 'To get the TreeViewSearchOption
+    'To get the TreeViewSearchOption
     Private Sub SearchOptionCombo_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles SearchOptionCombo.SelectedIndexChanged
        dialog.TreeViewSearchOption = CType(Me.SearchOptionCombo.Items(Me.SearchOptionCombo.Items.IndexOf(Me.SearchOptionCombo.SelectedItem)), TreeViewSearchOption)
     End Sub
    
- 'To Find TreeNodeAdv
+    'To Find TreeNodeAdv
     Private Sub button1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles button1.Click
        dialog.Find(Me.findTextBox.Text)
     End Sub
   
-  'To Find All the TreeNodeAdv
+    'To Find All the TreeNodeAdv
     Private Sub button2_Click(ByVal sender As Object, ByVal e As EventArgs) Handles button2.Click
        dialog.FindAll(Me.findTextBox.Text)
     End Sub
   
-  'To Replace the TreeNodeAdv
+    'To Replace the TreeNodeAdv
     Private Sub button3_Click(ByVal sender As Object, ByVal e As EventArgs) Handles button3.Click
        Me.TreeView.SelectedNodes.Clear()
        If dialog.Find(Me.findTextBox.Text) Then
@@ -223,7 +225,7 @@ Partial Public Class TreeViewSearchForm
        End If
     End Sub
    
- 'To Replace All the TreeNodeAdv
+    'To Replace All the TreeNodeAdv
     Private Sub button4_Click(ByVal sender As Object, ByVal e As EventArgs) Handles button4.Click
        Me.TreeView.SelectedNodes.Clear()
        If dialog.FindAll(Me.findTextBox.Text) Then
