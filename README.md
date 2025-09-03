@@ -161,7 +161,7 @@ public partial class TreeViewSearchForm : MetroForm
 
 ```
 
-**VB Code snippet:**
+**VB.Net Code snippet:**
 
 ```VB
 
