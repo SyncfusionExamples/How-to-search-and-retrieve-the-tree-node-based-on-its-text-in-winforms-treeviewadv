@@ -102,7 +102,8 @@ public partial class TreeViewSearchForm : MetroForm
     TreeViewAdvFindReplaceDialog dialog = null;
     //Initialize the TreeViewAdv
     private TreeViewAdv TreeView;
-        //To pass the TreeviewAdv argument to the form.
+    
+    //To pass the TreeviewAdv argument to the form.
     public TreeViewSearchForm(TreeViewAdv tree)
     {
         InitializeComponent();
