@@ -1,4 +1,4 @@
-# How to search and retrieve the tree node based on its text in winforms treeviewadv?
+# How to search and retrieve the tree node based on its text in WinForms TreeViewAdv?
 
 ## Search and retrieve the TreeNodeAdv text
 
