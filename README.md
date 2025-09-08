@@ -78,7 +78,7 @@ This option helps to specify whether the search needs to be performed from the t
 
 This option helps to specify whether the search can be performed in the above cases repeatedly. The following code example demonstrates the same.
 
-**C# Code snippet:**
+**C#:**
 
 ```C#
 //Initialize the TreeViewSearchForm
@@ -161,7 +161,7 @@ public partial class TreeViewSearchForm : MetroForm
 
 ```
 
-**VB.Net Code snippet:**
+**VB.Net:**
 
 ```VB
 
